@@ -6,7 +6,7 @@ import React from "react";
 import theme from "../config/theme";
 
 const classes = {
-  navBar: {
+  root: {
     padding: theme.spacing(3),
     display: "flex",
     justifyContent: "space-between",
@@ -15,6 +15,7 @@ const classes = {
     position: "sticky",
     zIndex: theme.zIndex.appBar,
     top: 0,
+    borderBottom: `5px solid ${theme.palette.gold}`,
   },
   navItems: {
     display: "flex",
@@ -29,7 +30,7 @@ const Navbar = () => {
   const navItems = ["About", "Works", "Contact"];
 
   return (
-    <Box sx={classes.navBar}>
+    <Box sx={classes.root}>
       <Typography variant="h6" sx={classes.item}>
         MUI
       </Typography>
